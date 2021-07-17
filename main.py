@@ -2,8 +2,9 @@ import flask
 from flask import request, jsonify
 from flask_cors import CORS
 import json
+
 app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+#app.config["DEBUG"] = True
 app.url_map.strict_slashes = False
 CORS(app)
 
@@ -59,5 +60,5 @@ def getPixels():
 
 
 if __name__== '__main__':
-    app.run(host="0.0.0.0", ssl_context='adhoc')
-    #app.run()
+    #app.run(host="0.0.0.0", ssl_context='adhoc', port=8080)
+    app.run()
